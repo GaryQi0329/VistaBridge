@@ -113,8 +113,7 @@ class CastInfoViewController: UIViewController ,UICollectionViewDataSource , UIC
                 cell.contentView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
                 
             }
-//            cell.layer.borderColor = UIColor.darkGray.cgColor
-//            cell.layer.borderWidth = 0.3
+            
             return cell
         }
         
