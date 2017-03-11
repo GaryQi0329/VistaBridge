@@ -164,11 +164,16 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
             if indexPath.row == 0 {
                 let image = UIImage(named: "download")
                 let imageView = UIImageView.init(image: image)
-                imageView.center = cell.contentView.center
-                imageView.sizeToFit()
+                imageView.frame = frameOfImageView(bounds: cell.contentView.bounds)
+                
                 cell.contentView.addSubview(imageView)
+                loadImageView = imageView
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.unloadSceneButtonTapped(_:)))
                 cell.contentView.addGestureRecognizer(tapGesture)
+                
+                cell.layer.borderColor = UIColor.darkGray.cgColor
+                cell.layer.borderWidth = 1.0
+                
                 return cell
             }
             
@@ -680,6 +685,7 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
             }
         }
         
+        
         //添加该场次进入
         
         ToBeChoosenScenesNo.append(targetSceneNo!.number)
@@ -697,6 +703,7 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         initToBeChoosen_sceneInfoViews()
         choosenView.reloadData()
         checkWrongSchedules()
+        }
     }
     
     func choosenAvailableSceneTapped(_ gesture: UITapGestureRecognizer) {
