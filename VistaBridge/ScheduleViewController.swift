@@ -60,6 +60,10 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
     var cellViews : [UIView] = []
     var toBeChoosen_sceneInfoViews : [ScheduleSceneInfoView] = []
     
+    //变换图标的UIImageView
+    var loadImageView : UIImageView?
+    let imageSize : CGFloat = 40
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
