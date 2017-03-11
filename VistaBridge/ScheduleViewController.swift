@@ -658,6 +658,7 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
     func unloadSceneButtonTapped(_ gesture: UITapGestureRecognizer) {
         //        print("有场次要被卸载！\(beingTapedDate):\(beingTapedSceneInfoView)")
         var ary : [DateInfo] = DATE_INFOS
+        if beingTapedDate != nil {
         let targetDay = (beingTapedDate! as NSString).integerValue
         let targetSceneNo = beingTapedSceneInfoView?.sceneInfo?.sceneNo
         
