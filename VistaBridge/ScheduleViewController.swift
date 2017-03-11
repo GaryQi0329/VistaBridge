@@ -733,4 +733,11 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         choosenView.reloadData()
         checkWrongSchedules()
     }
+    
+    //计算 上传/下载 图片的位置和大小
+    private func frameOfImageView(bounds : CGRect) -> CGRect {
+        let point = CGPoint(x: (bounds.size.width - imageSize)/2, y: (bounds.size.height - imageSize)/2)
+        let size = CGSize(width: imageSize, height: imageSize)
+        return CGRect(origin: point, size: size)
+    }
 }
