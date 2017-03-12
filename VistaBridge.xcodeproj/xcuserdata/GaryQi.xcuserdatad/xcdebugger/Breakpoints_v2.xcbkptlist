@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VistaBridge/ScheduleViewController.swift"
-            timestampString = "510939101.153328"
+            timestampString = "510980776.558932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "656"
-            endingLineNumber = "656"
+            startingLineNumber = "657"
+            endingLineNumber = "657"
             landmarkName = "sceneTaped(_:)"
             landmarkType = "7">
          </BreakpointContent>

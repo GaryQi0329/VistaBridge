@@ -162,7 +162,7 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
             cell.contentView.backgroundColor = UIColor.clear
             
             if indexPath.row == 0 {
-                let image = UIImage(named: "download")
+                let image = UIImage(named: "plus")
                 let imageView = UIImageView.init(image: image)
                 imageView.frame = frameOfImageView(bounds: cell.contentView.bounds)
                 
@@ -653,8 +653,13 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
                     beingTapedSceneInfoView!.layer.borderWidth = 0.0
                     }
                     beingTapedSceneInfoView = v as! ScheduleSceneInfoView
+                    
                     v.layer.borderColor = COLORS[1].cgColor
                     v.layer.borderWidth = 2.0
+                    
+                    //change image about download/upload/plus cell
+                    loadImageView?.image = UIImage(named: "download")
+                    
                     break
                 } else {
                     break
@@ -695,7 +700,6 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         //        wrongSchedules
         
         DATE_INFOS = ary
-        
         prepareAllThings()
         
         createWrongSchedules()
@@ -703,19 +707,21 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         initToBeChoosen_sceneInfoViews()
         choosenView.reloadData()
         checkWrongSchedules()
+            
+            beingTapedDate = nil
         }
     }
     
     func choosenAvailableSceneTapped(_ gesture: UITapGestureRecognizer) {
-        print(gesture.view!.tag)
         beingSelectedSceneNo = gesture.view!.tag
+        
+        loadImageView?.image = UIImage(named: "upload")
         
         for v in cellViews {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dateCellTouched(_:)))
             v.addGestureRecognizer(tapGesture)
-            
         }
-        
+            
         
     }
     
@@ -738,7 +744,6 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         beingSelectedSceneNo = -1
         
         prepareAllThings()
-        
         createWrongSchedules()
         scheduleView.reloadData()
         initToBeChoosen_sceneInfoViews()
