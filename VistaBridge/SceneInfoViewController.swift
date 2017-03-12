@@ -48,8 +48,8 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
         cell.sceneNumber.font = UIFont(name: "PingFangTC-Medium", size: 17)
 //        cell.sceneNumber.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
         cell.sceneNumber.backgroundColor = getColorFromStatus(status: SCENE_INFOS[indexPath.row].sceneNo.status)
-//        cell.layer.borderColor = UIColor.blueColor().CGColor
-//        cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = UIColor.darkGray.cgColor
+        cell.layer.borderWidth = 0.3
         cell.sceneNumber.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
         return cell
     }
