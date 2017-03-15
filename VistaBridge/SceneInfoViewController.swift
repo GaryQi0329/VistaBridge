@@ -45,11 +45,11 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_SceneNumberCell, for: indexPath) as! SceneNumberCell
         cell.sceneNumber.text = String(SCENE_INFOS[indexPath.row].sceneNo.number)
         cell.sceneNumber.textAlignment = .center
-        cell.sceneNumber.font = UIFont(name: "PingFangTC-Medium", size: 17)
+//        cell.sceneNumber.font = UIFont(name: "PingFangTC-Medium", size: 17)
 //        cell.sceneNumber.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
         cell.sceneNumber.backgroundColor = getColorFromStatus(status: SCENE_INFOS[indexPath.row].sceneNo.status)
-        cell.layer.borderColor = UIColor.darkGray.cgColor
-        cell.layer.borderWidth = 0.3
+//        cell.layer.borderColor = UIColor.darkGray.cgColor
+//        cell.layer.borderWidth = 0.3
         cell.sceneNumber.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
         return cell
     }
@@ -80,6 +80,10 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
