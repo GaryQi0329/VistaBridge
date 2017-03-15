@@ -15,8 +15,6 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
     
     let NotificationName_DateNumberChange = "DateInfoViewController_DateNumberChanged"
     
-    var isMutiple = false
-    
     var chartIndex = 0 {
         didSet {
             prepareVBChart()
@@ -41,7 +39,6 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
-        
     }
     
     
@@ -51,11 +48,6 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
         let item0 = UIBarButtonItem(title: "日", style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
         let item1 = UIBarButtonItem(title: "场", style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item1,item0]
-        
-        if isMutiple != true {
-        chartView.frame.size.height = chartView.frame.size.height - self.navigationController!.navigationBar.bounds.height - 10
-        isMutiple = true
-        }
         
         date = "0711"
     }
@@ -101,18 +93,9 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             i.removeFromSuperview()
         }
         
-        
         var vbChart = VBChartView.init(frame: chartView.bounds)
         vbChart = vbChart.initWithFrame(vbChart.frame, dataSource: self , ctl : self)
-        
         vbChart.showInView(chartView)
-        print(chartView.bounds)
-        print(self.view.bounds)
-        print(timeAxisReferenceView.bounds)
-        print(self.navigationController?.navigationBar.bounds.height)
-//        vbChart.layer.borderColor = UIColor.darkGray.cgColor
-//        vbChart.layer.borderWidth = 0.3
-        
     }
     
     //表标题

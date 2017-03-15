@@ -112,7 +112,6 @@ class VBChartView: UIView , UUChartDataSource{
         let titleLabel = UILabel.init(frame: rect1)
         titleLabel.text = dataSource.chartConfigTitle(self)
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartTitleLabelFontSize)
         titleView.addSubview(titleLabel)
         
         //axisXTitleView
@@ -120,7 +119,6 @@ class VBChartView: UIView , UUChartDataSource{
         let axisXTitleLabel = UILabel.init(frame: rect2)
         axisXTitleLabel.text = dataSource.chartConfigAxisXTitle(self)
         axisXTitleLabel.textAlignment = .center
-        axisXTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
         axisXTitleView.addSubview(axisXTitleLabel)
         
         //axisYTitleView
@@ -128,7 +126,6 @@ class VBChartView: UIView , UUChartDataSource{
         let axisYTitleLabel = UILabel.init(frame: rect3)
         axisYTitleLabel.text = dataSource.chartConfigAxisYTitle(self)
         axisYTitleLabel.textAlignment = .center
-        axisYTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
         axisYTitleView.addSubview(axisYTitleLabel)
         
         //

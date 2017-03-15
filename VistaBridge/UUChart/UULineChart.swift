@@ -28,8 +28,6 @@ class UULineChart: UIView {
     
     var chartLabelsForX:NSHashTable<AnyObject>!
     
-    var isMutiple = false
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.clipsToBounds = false
@@ -79,7 +77,7 @@ class UULineChart: UIView {
         let levelHeight:CGFloat = chartCavanHeight / UUYLabelLevelCount
         for index in 0..<Int(UUYLabelLevelCount+1) {
             let label:UUChartLabel = UUChartLabel(frame : CGRect(x: 0.0,y: chartCavanHeight-(CGFloat(index)*levelHeight)+5, width: UUYLabelwidth, height: UULabelHeight))
-            label.text = String(format: "%.0f",(level * CGFloat(index) + self.yValueMin))
+            label.text = String(format: "%.2f",(level * CGFloat(index) + self.yValueMin))
             self.addSubview(label)
         }
         
@@ -124,7 +122,6 @@ class UULineChart: UIView {
         for i in 0 ..< xLabels.count {
             let label:UUChartLabel = UUChartLabel(frame : CGRect(x: CGFloat(i) * self.xLabelWidth + UUYLabelwidth, y: self.frame.size.height - UULabelHeight, width: self.xLabelWidth, height: UULabelHeight))
             label.text = xLabels[i] as? String
-            
             self.addSubview(label)
             self.chartLabelsForX .add(label)
         }

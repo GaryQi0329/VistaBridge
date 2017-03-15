@@ -16,7 +16,7 @@ class UUChartLabel: UILabel {
         self.lineBreakMode = NSLineBreakMode.byWordWrapping
         self.minimumScaleFactor = 5.0
         self.numberOfLines = 1
-        self.font = UIFont(name: "Copperplate-Bold", size: 15)
+        self.font = UIFont.boldSystemFont(ofSize: 9.0)
         self.textColor = UIColor.darkGray
         self.textAlignment = NSTextAlignment.center
         self.backgroundColor = UIColor.clear

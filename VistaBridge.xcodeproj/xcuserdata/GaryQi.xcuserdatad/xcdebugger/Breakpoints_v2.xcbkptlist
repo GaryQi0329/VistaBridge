@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VistaBridge/DailySheetViewController.swift"
-            timestampString = "511265869.592382"
+            timestampString = "510215219.612434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "prepareVBChart()"
             landmarkType = "7">
          </BreakpointContent>
