@@ -133,7 +133,7 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             //工作时长
             return "近7日"
         default:
-            return "项目进度"
+            return "进度"
         }
 
     }
@@ -145,7 +145,7 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             //工作时长
             return "时间(H)"
         default:
-            return "项目完成度(P)"
+            return "完成度(P)"
         }
 
     }

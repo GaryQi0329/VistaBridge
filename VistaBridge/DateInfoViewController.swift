@@ -55,9 +55,11 @@ class DateInfoViewController: UIViewController , UICollectionViewDataSource, UIC
         if indexPath.section == 0 {
         let dateToBeDisplay = DATE["7月"]![indexPath.row]
         cell.dateLabel.text = dateToBeDisplay
+            cell.dateLabel.font = UIFont(name: "Copperplate", size: 19.0)
         } else {
             let dateToBeDisplay = DATE["8月"]![indexPath.row]
             cell.dateLabel.text = dateToBeDisplay
+            cell.dateLabel.font = UIFont(name: "Copperplate", size: 19.0)
         }
         return cell
     }
