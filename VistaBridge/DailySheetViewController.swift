@@ -48,8 +48,8 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //为NavigationItem添加按钮，注意这个NavigationItem是谁的
-        let item0 = UIBarButtonItem(title: "日", style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
-        let item1 = UIBarButtonItem(title: "场", style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
+        let item0 = UIBarButtonItem(image:UIImage(named: "paper"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
+        let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item1,item0]
         
         if isMutiple != true {

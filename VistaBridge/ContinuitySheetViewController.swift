@@ -27,6 +27,16 @@ class ContinuitySheetViewController: UIViewController,UITableViewDataSource,UITa
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //为NavigationItem添加按钮，注意这个NavigationItem是谁的
+        let item0 = UIBarButtonItem(image:UIImage(named: "paper"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
+        let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
+        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item1,item0]
+        
+        date = "0711"
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,15 +101,6 @@ class ContinuitySheetViewController: UIViewController,UITableViewDataSource,UITa
     func DateNumberChanged(_ notification : Notification) {
         let userInfo = notification.userInfo as! [String : String]
         date = userInfo["date"]
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //为NavigationItem添加按钮，注意这个NavigationItem是谁的
-        let item0 = UIBarButtonItem(title: "日", style: .plain, target: self, action: #selector(ContinuitySheetViewController.segueToDailySheet))
-        let item1 = UIBarButtonItem(title: "场", style: .plain, target: self, action: #selector(ContinuitySheetViewController.segueToContinuitySheet))
-        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item1,item0]
     }
     
     func segueToDailySheet() {

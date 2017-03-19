@@ -29,7 +29,7 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.navigationItem.rightBarButtonItems = []
+//        self.tabBarController?.navigationItem.rightBarButtonItems = []
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
