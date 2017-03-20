@@ -14,7 +14,6 @@
 		5F04D5A41DBCF12300814A9F /* CallSheetSceneInfoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04D5A31DBCF12300814A9F /* CallSheetSceneInfoHeaderCell.swift */; };
 		5F04D5B01DBDB9A400814A9F /* CallSheetCastInfoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04D5AF1DBDB9A400814A9F /* CallSheetCastInfoHeaderCell.swift */; };
 		5F04D5B31DBE7CFC00814A9F /* CallSheetCastInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04D5B21DBE7CFC00814A9F /* CallSheetCastInfoCell.swift */; };
-		5F0F24301E7EE6680032C8B5 /* collapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0F242F1E7EE6680032C8B5 /* collapsibleView.swift */; };
 		5F126ED61D94239E0091E0E3 /* SceneNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F126ED51D94239E0091E0E3 /* SceneNumberCell.swift */; };
 		5F1A1BC21D8ACC91008F9F33 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A1BC11D8ACC91008F9F33 /* DateCell.xib */; };
 		5F1E07D61E1CADE8000FF2B3 /* screenplay.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5F1E07D51E1CADE8000FF2B3 /* screenplay.txt */; };
@@ -89,7 +88,6 @@
 		5F04D5A31DBCF12300814A9F /* CallSheetSceneInfoHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallSheetSceneInfoHeaderCell.swift; sourceTree = "<group>"; };
 		5F04D5AF1DBDB9A400814A9F /* CallSheetCastInfoHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallSheetCastInfoHeaderCell.swift; sourceTree = "<group>"; };
 		5F04D5B21DBE7CFC00814A9F /* CallSheetCastInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallSheetCastInfoCell.swift; sourceTree = "<group>"; };
-		5F0F242F1E7EE6680032C8B5 /* collapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collapsibleView.swift; sourceTree = "<group>"; };
 		5F126ED51D94239E0091E0E3 /* SceneNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneNumberCell.swift; sourceTree = "<group>"; };
 		5F1A1BC11D8ACC91008F9F33 /* DateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		5F1E07D51E1CADE8000FF2B3 /* screenplay.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = screenplay.txt; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 				5F2CDE4C1DC645E800573D7A /* ScheduleSceneInfoView.swift */,
 				5F69A4361E4ADC21008A8112 /* VBChart */,
 				5FEFBCB11E63E1C500A14D47 /* SceneCard */,
-				5F0F242F1E7EE6680032C8B5 /* collapsibleView.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -546,7 +543,6 @@
 				5F31855C1D7EB12C00B41603 /* DetailTabBarController.swift in Sources */,
 				5FE2141E1D8009C00077D437 /* ActorCell.swift in Sources */,
 				5FF009AB1D8A88C5006E9E68 /* CustomCollectionViewLayout.swift in Sources */,
-				5F0F24301E7EE6680032C8B5 /* collapsibleView.swift in Sources */,
 				5FEFBCAF1E63DEC000A14D47 /* SceneCardViewController.swift in Sources */,
 				5FD91A791D913199008B7B01 /* ContinuitySheetOfSceneViewController.swift in Sources */,
 				5F1F1D471D7EEBC700B387ED /* ScheduleViewController.swift in Sources */,
