@@ -42,12 +42,22 @@ class SceneCardViewController: UIViewController {
             
             let sLabelFrame = CGRect(x: 0, y: 0, width: sceneNumberTextView_width, height: sceneNumberTextView_height)
             sceneNumberTextView.frame = sLabelFrame
+            sceneNumberTextView.layer.borderColor = UIColor.darkGray.cgColor
+            sceneNumberTextView.layer.borderWidth = 0.5
+            
             
             let cFrame = CGRect(x: 0, y: 2*sceneCard_K, width: contentTextView_width, height: contentTextView_height)
             contentTextView.frame = cFrame
             
+            contentTextView.layer.borderColor = UIColor.darkGray.cgColor
+            contentTextView.layer.borderWidth = 0.5
+            
+            
             let rFrame = CGRect(x: 12*sceneCard_K, y: 2*sceneCard_K, width: remarkTextField_width, height: remarkTextField_height)
             remarkTextField.frame = rFrame
+            
+            remarkTextField.layer.borderWidth = 0.5
+            remarkTextField.layer.borderColor = UIColor.darkGray.cgColor
             
             var i : CGFloat = 0
             for j in 0...toolButtons.count-1 {
