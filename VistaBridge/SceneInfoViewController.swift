@@ -20,6 +20,7 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
         self.tabBarController?.navigationItem.title = "场次信息"
         self.navigationItem.leftBarButtonItem = self.tabBarController?.navigationItem.leftBarButtonItem
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.sceneStatusRefresh(notification:)), name: NSNotification.Name(rawValue: "sceneNo_refresh"), object: nil)
     }   
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +86,10 @@ class SceneInfoViewController: UIViewController , UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func sceneStatusRefresh(notification : NSNotification) {
+        sceneNoCollectionView.reloadData()
     }
     
     }
