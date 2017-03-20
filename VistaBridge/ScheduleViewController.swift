@@ -708,7 +708,7 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         choosenView.reloadData()
         checkWrongSchedules()
             
-            beingTapedDate = nil
+        beingTapedDate = nil
         }
     }
     

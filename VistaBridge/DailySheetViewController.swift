@@ -15,6 +15,8 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
     
     let NotificationName_DateNumberChange = "DateInfoViewController_DateNumberChanged"
     
+    var isMutiple = false
+    
     var chartIndex = 0 {
         didSet {
             prepareVBChart()
@@ -39,15 +41,21 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //为NavigationItem添加按钮，注意这个NavigationItem是谁的
-        let item0 = UIBarButtonItem(title: "日", style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
-        let item1 = UIBarButtonItem(title: "场", style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
+        let item0 = UIBarButtonItem(image:UIImage(named: "paper"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
+        let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item1,item0]
+        
+        if isMutiple != true {
+        chartView.frame.size.height = chartView.frame.size.height - self.navigationController!.navigationBar.bounds.height - 10
+        isMutiple = true
+        }
         
         date = "0711"
     }
@@ -93,9 +101,18 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             i.removeFromSuperview()
         }
         
+        
         var vbChart = VBChartView.init(frame: chartView.bounds)
         vbChart = vbChart.initWithFrame(vbChart.frame, dataSource: self , ctl : self)
+        
         vbChart.showInView(chartView)
+        print(chartView.bounds)
+        print(self.view.bounds)
+        print(timeAxisReferenceView.bounds)
+        print(self.navigationController?.navigationBar.bounds.height)
+//        vbChart.layer.borderColor = UIColor.darkGray.cgColor
+//        vbChart.layer.borderWidth = 0.3
+        
     }
     
     //表标题
@@ -116,7 +133,7 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             //工作时长
             return "近7日"
         default:
-            return "项目进度"
+            return "进度"
         }
 
     }
@@ -128,7 +145,7 @@ class DailySheetViewController: UIViewController , VBChartDataSource{
             //工作时长
             return "时间(H)"
         default:
-            return "项目完成度(P)"
+            return "完成度(P)"
         }
 
     }

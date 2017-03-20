@@ -76,6 +76,7 @@ class VBChartView: UIView , UUChartDataSource{
         //titleView
         v.titleView = UIView.init(frame: CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width, height: VBChartTitleHeight))
         
+        
         //axisXTitleView
         let titleRect = v.titleView.frame     //axisXTitleView包含于titleView
         v.axisXTitleView = UIView.init(frame: CGRect(x: titleRect.origin.x, y: titleRect.size.height-VBChartAxisXTitleHeight, width: UUYLabelwidth, height: VBChartAxisXTitleHeight))
@@ -86,15 +87,17 @@ class VBChartView: UIView , UUChartDataSource{
         
         //chartModeButtons
         var buttons : [UIButton] = []
+        let imagesIndex = ["times","process"]
         var ts = ["T","P","A"]
-        for i in 0...2 {
+        for i in 0...1 {
             let tRect = v.titleView.bounds
-            let iX = tRect.size.width - CGFloat(3-i)*VBChartButtonWidth
-            let iRect = CGRect(x: iX, y: tRect.origin.y, width: VBChartButtonWidth, height: VBChartButtonWidth)
+            let mX = v.axisXTitleView.bounds.width
+            let iX = tRect.size.width - CGFloat(2-i)*VBChartButtonWidth - CGFloat(2-i)*5 - mX
+            let iRect = CGRect(x: iX, y: tRect.origin.y + tRect.size.height - VBChartButtonWidth - 10, width: VBChartButtonWidth, height: VBChartButtonWidth)
+            
             let b = UIButton.init(frame: iRect)
-            b.backgroundColor = COLORS[i]
-//            b.setTitle(ts[i], for: UIControlState())
-            b.setImage(UIImage(named:"dog"), for: UIControlState())
+            b.tag = buttonTags[i]
+            b.setImage(UIImage(named:imagesIndex[i]), for: UIControlState())
             b.addTarget(self, action: #selector(self.buttonPressed(_ :)), for: UIControlEvents.touchUpInside)
             buttons.append(b)
         }
@@ -112,6 +115,8 @@ class VBChartView: UIView , UUChartDataSource{
         let titleLabel = UILabel.init(frame: rect1)
         titleLabel.text = dataSource.chartConfigTitle(self)
         titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
+        titleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartTitleLabelFontSize)
         titleView.addSubview(titleLabel)
         
         //axisXTitleView
@@ -119,6 +124,8 @@ class VBChartView: UIView , UUChartDataSource{
         let axisXTitleLabel = UILabel.init(frame: rect2)
         axisXTitleLabel.text = dataSource.chartConfigAxisXTitle(self)
         axisXTitleLabel.textAlignment = .center
+        axisXTitleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
+        axisXTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
         axisXTitleView.addSubview(axisXTitleLabel)
         
         //axisYTitleView
@@ -126,6 +133,8 @@ class VBChartView: UIView , UUChartDataSource{
         let axisYTitleLabel = UILabel.init(frame: rect3)
         axisYTitleLabel.text = dataSource.chartConfigAxisYTitle(self)
         axisYTitleLabel.textAlignment = .center
+        axisYTitleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
+        axisYTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
         axisYTitleView.addSubview(axisYTitleLabel)
         
         //
@@ -189,7 +198,13 @@ class VBChartView: UIView , UUChartDataSource{
     
     //buttonPressed
     func buttonPressed(_ button : UIButton){
-        controller.chartIndex = 1
+        switch button.tag {
+        case 7701:
+            controller.chartIndex = 0
+        default:
+            controller.chartIndex = 1
+        }
+        
     }
     
 }

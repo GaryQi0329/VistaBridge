@@ -38,10 +38,11 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
         super.viewWillAppear(animated)
         
         //为NavigationItem添加按钮，注意这个NavigationItem是谁的
-        let item0 = UIBarButtonItem(title: "常", style: .plain, target: self, action: #selector(ContinuitySheetOfSceneViewController.segueToCommonInfos))
-        let item1 = UIBarButtonItem(title: "场", style: .plain, target: self, action: #selector(ContinuitySheetOfSceneViewController.segueToContinuitySheet))
-        let item2 = UIBarButtonItem(title: "接", style: .plain, target: self, action: #selector(ContinuitySheetOfSceneViewController.segueToContinuityPics))
-        let item3 = UIBarButtonItem(title: "剧", style: .plain, target: self, action: #selector(self.segueToScreenplay))
+        let item0 = UIBarButtonItem(image:UIImage(named: "info"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToCommonInfos))
+        
+        let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToContinuitySheet))
+        let item2 = UIBarButtonItem(image:UIImage(named: "photo"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToContinuityPics))
+        let item3 = UIBarButtonItem(image:UIImage(named: "script"), style: .plain, target: self, action: #selector(self.segueToScreenplay))
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item3,item2,item1,item0]
     }
     
