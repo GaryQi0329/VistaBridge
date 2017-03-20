@@ -117,6 +117,7 @@ class VBChartView: UIView , UUChartDataSource{
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
         titleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartTitleLabelFontSize)
+
         titleView.addSubview(titleLabel)
         
         //axisXTitleView
@@ -126,6 +127,7 @@ class VBChartView: UIView , UUChartDataSource{
         axisXTitleLabel.textAlignment = .center
         axisXTitleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
         axisXTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
+
         axisXTitleView.addSubview(axisXTitleLabel)
         
         //axisYTitleView
@@ -135,6 +137,7 @@ class VBChartView: UIView , UUChartDataSource{
         axisYTitleLabel.textAlignment = .center
         axisYTitleLabel.textColor = UIColor(red: 70/255, green: 78/255, blue: 80/255, alpha: 1)
         axisYTitleLabel.font = UIFont(name: "PingFangTC-Medium", size: VBChartAxisLabelFontSize)
+
         axisYTitleView.addSubview(axisYTitleLabel)
         
         //

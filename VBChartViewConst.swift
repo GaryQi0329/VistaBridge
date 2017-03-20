@@ -15,10 +15,9 @@ let VBChartAxisXTitleHeight : CGFloat! = 40.0   //横坐标标题宽度
 
 let VBChartButtonWidth : CGFloat! = UUYLabelwidth/3.25
 
-let VBChartTitleLabelFontSize : CGFloat = 20
-let VBChartAxisLabelFontSize : CGFloat = 15
-
 //UUChart
 let UUYLabelwidth:CGFloat! = 80.0
 
 let buttonTags = [7701,7702]
+let VBChartAxisLabelFontSize : CGFloat = 12.0
+let VBChartTitleLabelFontSize : CGFloat = 15.0
