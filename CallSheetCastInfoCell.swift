@@ -9,7 +9,7 @@
 import UIKit
 
 class CallSheetCastInfoCell: UITableViewCell {
-
+    
     var labels : [UILabel] = []//按顺序依次为：["演员","角色","出发时间","梳妆时间","服装时间","进场时间","备注"]
     
     var characterInfosAboutCallSheet : CharactersInfosAboutCallSheet?
@@ -39,9 +39,9 @@ class CallSheetCastInfoCell: UITableViewCell {
         if let characterInfos  = self.characterInfosAboutCallSheet {
             labels[0].text = searchCharacterInfosByID(characterInfos.characterID)?.name
             labels[1].text = searchCastInfosByID(characterInfos.characterID)
-//            labels[2].text = 
+            labels[2].text = characterInfos.departureTime
             labels[3].text = characterInfos.makeupTime
-//            labels[4].text = characterInfos.wardrobeID
+            labels[4].text = characterInfos.wardrobeTime
             labels[5].text = characterInfos.setCallTime
             labels[6].text = characterInfos.remarks
             
@@ -62,21 +62,30 @@ class CallSheetCastInfoCell: UITableViewCell {
         
         for i in 0...6 {
             labels[i].frame.origin.x = 0 + referenceK * CGFloat(arr1[i])
-//            labels[i].frame.origin.y = (superviewHeight - )
+            //            labels[i].frame.origin.y = (superviewHeight - )
             labels[i].frame.size.width = referenceK * CGFloat(arr2[i])
             labels[i].frame.size.height = contentView.frame.height
         }
         
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     fileprivate func searchCharacterInfosByID(_ ID : Int) -> Character?{
-        for character in characters {
-            if character.ID == ID {
-                return character
+        if(ID < 200) {
+            for character in characters {
+                if character.ID == ID {
+                    return character
+                }
+            }
+        } else {
+            //说明是群演
+            for character in backgroundCharacters {
+                if character.ID == ID {
+                    return character
+                }
             }
         }
         
@@ -97,5 +106,5 @@ class CallSheetCastInfoCell: UITableViewCell {
         return nil
         
     }
-
+    
 }

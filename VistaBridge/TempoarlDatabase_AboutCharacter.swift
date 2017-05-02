@@ -125,6 +125,21 @@ let CAST = [
     Cast(castID: 222, characterID: 122, name: "林允"),
 ]
 
+let backgroundCharacters = [
+    Character(ID: 701, name: "魔兵", acronym: "魔" , makeups:[
+        MakeUpInfo(makeupID: 1, duration: 90, name: "魔兵1号妆"),
+        
+        ], wardrobes:[
+            WardrobeInfo(wardrobeID: 1, dreesingTime: 30, name: "魔兵1号装"),
+            
+        ],color : UIColor.init(red: 161/255, green: 47/255, blue: 47/255, alpha: 1)),
+    Character(ID: 702, name: "草原联军", acronym: "联" , makeups:[
+        MakeUpInfo(makeupID: 1, duration: 90, name: "联军1号妆"),
+        ], wardrobes:[
+            WardrobeInfo(wardrobeID: 1, dreesingTime: 30, name: "联军1号装"),
+        ],color : UIColor.init(red: 161/255, green: 47/255, blue: 47/255, alpha: 1))
+]
+
 let characters =
 [
     Character(ID: 101, name: "忽出鲁", acronym: "忽" , makeups:[
@@ -135,8 +150,8 @@ let characters =
             WardrobeInfo(wardrobeID: 1, dreesingTime: 30, name: "魔王1号装"),
             WardrobeInfo(wardrobeID: 2, dreesingTime: 30, name: "魔王2号装"),
             WardrobeInfo(wardrobeID: 3, dreesingTime: 30, name: "3号游牧装")
-        ],color : UIColor.init(red: 161/255, green: 47/255, blue: 47/255, alpha: 1)),
-    
+        ],color : UIColor.init(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)),
+
     Character(ID: 102, name: "铁木真", acronym: "铁" , makeups:[
         MakeUpInfo(makeupID: 4, duration: 100, name: "铁木真1号妆"),
         MakeUpInfo(makeupID: 5, duration: 100, name: "铁婚礼2号妆"),
@@ -159,19 +174,20 @@ let characters =
     Character(ID: 107, name: "也速亥", acronym: "也", makeups: [MakeUpInfo(makeupID: 10, duration:100, name: "也速亥1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 10, dreesingTime: 30, name: "也速亥1号妆")],color:UIColor.init(red: 161/255, green: 23/255, blue: 21/255, alpha: 1)),
     Character(ID: 108, name: "诃额伦", acronym: "诃", makeups: [MakeUpInfo(makeupID: 11, duration:100, name: "诃额伦1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 11, dreesingTime: 30, name: "诃额伦1号妆")],color:UIColor.init(red: 217/255, green: 104/255, blue: 49/255, alpha: 1)),
     Character(ID: 109, name: "塔里忽台", acronym: "塔", makeups: [MakeUpInfo(makeupID: 12, duration:100, name: "塔里忽台1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 12, dreesingTime: 30, name: "塔里忽台1号妆")],color:UIColor.init(red: 78/255, green: 29/255, blue: 76/255, alpha: 1)),
-    Character(ID: 110, name: "朵歹", acronym: "朵", makeups: [MakeUpInfo(makeupID: 13, duration:120, name: "朵歹1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 13, dreesingTime: 30, name: "朵歹1号妆")],color:UIColor.init(red: 38/255, green: 188/255, blue: 213/255, alpha: 1)),
+    Character(ID: 110, name: "朵歹", acronym: "朵", makeups: [MakeUpInfo(makeupID: 13, duration:120, name: "朵歹1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 13, dreesingTime: 30, name: "朵歹1号妆")],color:UIColor.init(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)),
+    
     Character(ID: 111, name: "少年铁木真", acronym: "真", makeups: [MakeUpInfo(makeupID: 14, duration:60, name: "少年铁木真1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 14, dreesingTime: 30, name: "少年铁木真1号妆")],color:UIColor.init(red: 255/255, green: 150/255, blue: 128/255, alpha: 1)),
     Character(ID: 112, name: "少年孛尔帖", acronym: "帖", makeups: [MakeUpInfo(makeupID: 15, duration:60, name: "少年孛尔帖1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 15, dreesingTime: 30, name: "少年孛尔帖1号妆")],color:UIColor.init(red: 0/255, green: 34/255, blue: 40/255, alpha: 1)),
     Character(ID: 113, name: "少年哈尔库", acronym: "哈", makeups: [MakeUpInfo(makeupID: 16, duration:60, name: "少年哈尔库1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 16, dreesingTime: 30, name: "少年哈尔库1号妆")],color:UIColor.init(red: 158/255, green: 157/255, blue: 131/255, alpha: 1)),
-    Character(ID: 114, name: "特薛禅", acronym: "特", makeups: [MakeUpInfo(makeupID: 17, duration:60, name: "特薛禅1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 17, dreesingTime: 30, name: "特薛禅1号妆")],color:UIColor.init(red: 85/255, green: 72/255, blue: 64/255, alpha: 1)),
+    Character(ID: 114, name: "特薛禅", acronym: "特", makeups: [MakeUpInfo(makeupID: 17, duration:60, name: "特薛禅1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 17, dreesingTime: 30, name: "特薛禅1号妆")],color:UIColor.init(red: 241/255, green: 196/255, blue: 15/255, alpha: 1)),
     Character(ID: 115, name: "少年哈撒尔", acronym: "尔", makeups: [MakeUpInfo(makeupID: 18, duration:60, name: "少年哈撒尔1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 18, dreesingTime: 30, name: "少年哈撒尔1号妆")],color:UIColor.init(red: 18/255, green: 53/255, blue: 65/255, alpha: 1)),
     Character(ID: 116, name: "少年别勒古台", acronym: "台", makeups: [MakeUpInfo(makeupID: 19, duration:60, name: "少年别勒古台1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 19, dreesingTime: 30, name: "少年别勒古台1号妆")],color:UIColor.init(red: 118/255, green: 77/255, blue: 57/255, alpha: 1)),
     Character(ID: 117, name: "哈撒尔", acronym: "撒", makeups: [MakeUpInfo(makeupID: 20, duration:90, name: "哈撒尔1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 20, dreesingTime: 30, name: "哈撒尔1号妆")],color:UIColor.init(red: 20/255, green: 68/255, blue: 106/255, alpha: 1)),
     Character(ID: 118, name: "别勒古台", acronym: "别", makeups: [MakeUpInfo(makeupID: 21, duration:90, name: "别勒古台1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 21, dreesingTime: 30, name: "别勒古台1号妆")],color:UIColor.init(red: 38/255, green: 157/255, blue: 128/255, alpha: 1)),
-    Character(ID: 119, name: "黑秃黑", acronym: "黑", makeups: [MakeUpInfo(makeupID: 22, duration:240, name: "黑秃黑1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 22, dreesingTime: 30, name: "黑秃黑1号妆")],color:UIColor.init(red: 3/255, green: 101/255, blue: 100/255, alpha: 1)),
-    Character(ID: 120, name: "扎乌", acronym: "黑", makeups: [MakeUpInfo(makeupID: 23, duration:180, name: "扎乌1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 23, dreesingTime: 30, name: "扎乌1号妆")],color:UIColor.init(red: 175/255, green: 18/255, blue: 88/255, alpha: 1)),
+    Character(ID: 119, name: "黑秃黑", acronym: "秃", makeups: [MakeUpInfo(makeupID: 22, duration:240, name: "黑秃黑1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 22, dreesingTime: 30, name: "黑秃黑1号妆")],color:UIColor.init(red: 175/255, green: 18/255, blue: 88/255, alpha: 1)),
+    Character(ID: 120, name: "扎乌", acronym: "黑", makeups: [MakeUpInfo(makeupID: 23, duration:180, name: "扎乌1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 23, dreesingTime: 30, name: "扎乌1号妆")],color:UIColor.init(red: 231/255, green: 76/255, blue: 60/255, alpha: 1)),
     Character(ID: 121, name: "哈尔库", acronym: "库", makeups: [MakeUpInfo(makeupID: 24, duration:100, name: "哈尔库1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 24, dreesingTime: 30, name: "哈尔库1号妆")],color:UIColor.init(red: 250/255, green: 179/255, blue: 61/255, alpha: 1)),
-    Character(ID: 121, name: "孛尔帖", acronym: "孛", makeups: [MakeUpInfo(makeupID: 25, duration:100, name: "孛尔帖1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 25, dreesingTime: 30, name: "孛尔帖1号妆")],color:UIColor.init(red: 222/255, green: 125/255, blue: 44/255, alpha: 1))
+    Character(ID: 121, name: "孛尔帖", acronym: "孛", makeups: [MakeUpInfo(makeupID: 25, duration:100, name: "孛尔帖1号妆")],wardrobes:[WardrobeInfo(wardrobeID: 25, dreesingTime: 30, name: "孛尔帖1号妆")],color:UIColor.init(red: 222/255, green: 125/255, blue: 44/255, alpha: 1)),
 ]
 
 

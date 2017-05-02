@@ -108,26 +108,27 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
             //群众演员&替身
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_infosWithTableCell, for:indexPath) as! InfosWithTableCell
             cell.typeLabel.text = "群演&替身"
-            cell.typeLabel.backgroundColor = UIColor(red: 130/255, green: 39/255, blue: 135/255, alpha: 1.0)
+            cell.typeLabel.backgroundColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1.0)
             cell.prepareInfosWithTableCell(.background, sceneNo: sceneNo)
             return cell
         case .props :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_infosWithTableCell, for:indexPath) as! InfosWithTableCell
             cell.typeLabel.text = "道具"
-            cell.typeLabel.backgroundColor = UIColor(red: 215/255, green: 36/255, blue: 49/255, alpha: 1.0)
+            cell.typeLabel.backgroundColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
             cell.prepareInfosWithTableCell(.props, sceneNo: sceneNo)
+
             return cell
         case .equipment :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_infosWithTableCell, for:indexPath) as! InfosWithTableCell
             cell.typeLabel.text = "拍摄器械"
-            cell.typeLabel.backgroundColor = UIColor(red: 235/255, green: 109/255, blue: 26/255, alpha: 1.0)
+            cell.typeLabel.backgroundColor = UIColor(red: 241/255, green: 196/255, blue: 15/255, alpha: 1.0)
             cell.prepareInfosWithTableCell(.equipment, sceneNo: sceneNo)
             return cell
         case .location :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_locationCell, for: indexPath) as! LocationCell
             cell.typeLabel.text = "拍摄地"
-            cell.typeLabel.backgroundColor = UIColor(red: 241/255, green: 170/255, blue: 32/255, alpha: 1.0)
-            //cell.prepareLocationImageView()
+            cell.typeLabel.backgroundColor = UIColor(red: 235/255, green: 109/255, blue: 26/255, alpha: 1.0)
+            
             return cell
         default:
             
