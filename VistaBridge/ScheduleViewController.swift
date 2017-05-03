@@ -78,8 +78,22 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("sadsadasdsadasdsadsadasd")
+        self.tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        prepareAllThings()
+        scheduleView.reloadData()
+        checkWrongSchedules()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         let item0 = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(ScheduleViewController.beforeMonth))
         let item1 = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(ScheduleViewController.nextMonth))
@@ -87,21 +101,9 @@ class ScheduleViewController: UIViewController,UICollectionViewDataSource,UIColl
         
         initToBeChoosen_sceneInfoViews()
         choosenView.reloadData()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         //checkForActorsInfo&ScreenplayInfo
-        prepareAllThings()
-        scheduleView.reloadData()
-        checkWrongSchedules()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
         
-        //        self.tabBarController?.navigationItem.rightBarButtonItems = []
     }
     
     override func didReceiveMemoryWarning() {

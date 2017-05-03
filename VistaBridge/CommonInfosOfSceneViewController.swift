@@ -12,6 +12,10 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //场次信息卡
+    @IBOutlet weak var cardSceneNo: UILabel!
+    
+    
     let NotificationName_DateNumberChange = "SceneInfoViewController_SceneNumberChanged"
     
     let identifier_infosWithTableCell = "InfosWithTableCell"
@@ -25,7 +29,7 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("2")
         // Do any additional setup after loading the view.
         
         self.tabBarController?.tabBar.isHidden = true
@@ -34,11 +38,8 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        //为NavigationItem添加按钮，注意这个NavigationItem是谁的
         
         let item0 = UIBarButtonItem(image:UIImage(named: "info"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToCommonInfos))
         
@@ -52,11 +53,16 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item3,item12,item2,item12,item1,item12,item0]
     }
     
-    //    override func viewWillDisappear(animated: Bool) {
-    //        super.viewWillDisappear(animated)
-    //
-    //        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = nil
-    //    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)  
+        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

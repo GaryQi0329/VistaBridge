@@ -28,28 +28,29 @@ class ScreenplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func  viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        //为NavigationItem添加按钮，注意这个NavigationItem是谁的
         let item0 = UIBarButtonItem(image:UIImage(named: "info"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToCommonInfos))
-        
         let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToContinuitySheet))
         let item2 = UIBarButtonItem(image:UIImage(named: "photo"), style: .plain, target: self, action: #selector(CommonInfosOfSceneViewController.segueToContinuityPics))
         let item3 = UIBarButtonItem(image:UIImage(named: "script"), style: .plain, target: self, action: #selector(self.segueToScreenplay))
-        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item3,item2,item1,item0]
-        assistant.initStrike()
-        textView_screenplay.attributedText = assistant.text_screenplay
+        let item12 = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        
+        item12.width = -5
+        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item3,item12,item2,item12,item1,item12,item0]
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         textView_screenplay.attributedText = assistant.text_screenplay
 
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.sceneNumberDidChanged(notification:)), name: NSNotification.Name(rawValue: NotificationName_DateNumberChange), object: nil)
     }
     

@@ -27,8 +27,8 @@ class ContinuitySheetViewController: UIViewController,UITableViewDataSource,UITa
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         //为NavigationItem添加按钮，注意这个NavigationItem是谁的
         let item0 = UIBarButtonItem(image:UIImage(named: "paper"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToDailySheet))
         let item1 = UIBarButtonItem(image:UIImage(named: "slate"), style: .plain, target: self, action: #selector(DailySheetViewController.segueToContinuitySheet))
@@ -37,6 +37,10 @@ class ContinuitySheetViewController: UIViewController,UITableViewDataSource,UITa
         date = "0711"
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

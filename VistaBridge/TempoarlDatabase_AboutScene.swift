@@ -135,6 +135,13 @@ var SCENE_INFOS : [SceneInfo] =
     SceneInfo(sceneNo: SceneNo(number:60,status:.white), atmosphere: .nightOut, pages: 0.2, sceneName: "雪山脚下", characters: [characters[1],characters[2]], backgroundActors: nil, synopsis: "听地表声音，铁博爬雪山", remark: nil, locationID: 1402)
 ]
 
+let CASTACTOR_INFOS_ABOUT_SCENE = [
+    CharacterInfosAboutScene(characterID: 101, sceneNo: 1, characterMakeupID: 1, characterWardrobeID: 1),
+    CharacterInfosAboutScene(characterID: 102, sceneNo: 1, characterMakeupID: 2, characterWardrobeID: 3),
+    CharacterInfosAboutScene(characterID: 103, sceneNo: 1, characterMakeupID: 2, characterWardrobeID: 2),
+    CharacterInfosAboutScene(characterID: 104, sceneNo: 1, characterMakeupID: 1, characterWardrobeID: 2)
+]
+
 struct VB_Range {
     let location : Int
     let length : Int

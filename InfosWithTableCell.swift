@@ -166,9 +166,25 @@ class InfosWithTableCell: UICollectionViewCell, UITableViewDataSource, UITableVi
         //ps. 忽出鲁 1号妆， 1号装 ["忽出鲁"，1，1]
         var castActorInfosAboutScene : [CharacterInfosAboutScene] = []
         
-        for castActorInfo in CASTACTOR_INFOS_ABOUT_SCENE {
-            if castActorInfo.sceneNo == sceneNo {
-                castActorInfosAboutScene.append(castActorInfo)
+//        var castActorInfosAboutScene : [SceneInfo] = []
+        
+//        for castActorInfo in CASTACTOR_INFOS_ABOUT_SCENE {
+//            if castActorInfo.sceneNo == sceneNo {
+//                castActorInfosAboutScene.append(castActorInfo)
+//            }
+//        }
+        
+        
+        for sceneInfo in SCENE_INFOS {
+            if sceneInfo.sceneNo.number == sceneNo {
+                
+                if (sceneInfo.characters != nil) {
+                for character in sceneInfo.characters! {
+                    let castActorInfo = CharacterInfosAboutScene(characterID: character.ID, sceneNo: sceneNo, characterMakeupID: character.makeups![0].makeupID, characterWardrobeID: character.wardrobes[0].wardrobeID)
+                    castActorInfosAboutScene.append(castActorInfo)
+                }
+                }
+                
             }
         }
         
