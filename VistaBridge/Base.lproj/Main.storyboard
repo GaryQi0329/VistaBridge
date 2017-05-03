@@ -1176,7 +1176,7 @@
                                         <color key="textColor" red="0.27450980392156865" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涉及演员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-Iv-2em">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涉及演员" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-Iv-2em">
                                         <rect key="frame" x="414.5" y="10" width="98.5" height="61.5"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1208,16 +1208,22 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="铁木真带兵冲向阎魔大殿，胯下白马嘶鸣不已。手中金刀，寒威凛凛。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr1-jf-of6">
                                         <rect key="frame" x="94.5" y="153.5" width="418.5" height="81.5"/>
-                                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
                                         <color key="textColor" red="0.27450980392156865" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDD-PG-hPp">
-                                        <rect key="frame" x="5" y="87" width="78" height="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDD-PG-hPp">
+                                        <rect key="frame" x="5" y="87" width="98.5" height="61"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="15"/>
                                         <color key="textColor" red="0.27450980392156865" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sda-h8-6R8">
+                                        <rect key="frame" x="414.5" y="102.5" width="98.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="kgf-uW-8kb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1226,6 +1232,7 @@
                                     <constraint firstItem="oF2-dd-9f9" firstAttribute="leading" secondItem="KcC-3b-CBu" secondAttribute="trailing" constant="5" id="1OZ-x6-4H3"/>
                                     <constraint firstItem="uYg-Iv-2em" firstAttribute="leading" secondItem="rAM-r7-l6V" secondAttribute="trailing" id="2KR-FM-qmb"/>
                                     <constraint firstItem="ZDD-PG-hPp" firstAttribute="centerX" secondItem="KcC-3b-CBu" secondAttribute="centerX" id="3b3-zg-ZGw"/>
+                                    <constraint firstItem="sda-h8-6R8" firstAttribute="centerY" secondItem="XHY-6K-7J7" secondAttribute="centerY" id="4nB-4v-Ggq"/>
                                     <constraint firstItem="Xr1-jf-of6" firstAttribute="centerY" secondItem="dh0-HF-hZ7" secondAttribute="centerY" id="7We-7z-VjJ"/>
                                     <constraint firstItem="pg4-jF-68Q" firstAttribute="centerY" secondItem="ZDD-PG-hPp" secondAttribute="centerY" id="7la-Vc-45h"/>
                                     <constraint firstItem="oF2-dd-9f9" firstAttribute="height" secondItem="KcC-3b-CBu" secondAttribute="height" id="7tT-On-tle"/>
@@ -1260,9 +1267,11 @@
                                     <constraint firstItem="uYg-Iv-2em" firstAttribute="width" secondItem="KcC-3b-CBu" secondAttribute="width" id="eTB-lD-i8R"/>
                                     <constraint firstAttribute="height" constant="240" id="hNY-ns-g2K"/>
                                     <constraint firstItem="lSi-xg-Wlz" firstAttribute="width" secondItem="oF2-dd-9f9" secondAttribute="width" id="hrN-Un-mfp"/>
+                                    <constraint firstItem="uYg-Iv-2em" firstAttribute="centerX" secondItem="sda-h8-6R8" secondAttribute="centerX" id="iCu-rL-naj"/>
                                     <constraint firstAttribute="bottom" secondItem="Xr1-jf-of6" secondAttribute="bottom" constant="5" id="kIc-B3-qQ4"/>
                                     <constraint firstItem="1s6-Ou-F4t" firstAttribute="height" secondItem="KcC-3b-CBu" secondAttribute="height" id="kKF-7D-Hi9"/>
                                     <constraint firstItem="ZDD-PG-hPp" firstAttribute="top" secondItem="KcC-3b-CBu" secondAttribute="bottom" constant="15" id="kuk-aT-7WU"/>
+                                    <constraint firstItem="uYg-Iv-2em" firstAttribute="width" secondItem="sda-h8-6R8" secondAttribute="width" id="l2N-Gr-W3C"/>
                                     <constraint firstItem="rAM-r7-l6V" firstAttribute="centerX" secondItem="XHY-6K-7J7" secondAttribute="centerX" id="nrm-XP-22V"/>
                                     <constraint firstItem="dh0-HF-hZ7" firstAttribute="centerX" secondItem="ZDD-PG-hPp" secondAttribute="centerX" id="o7J-aN-Wmj"/>
                                     <constraint firstItem="1s6-Ou-F4t" firstAttribute="centerX" secondItem="pg4-jF-68Q" secondAttribute="centerX" id="oHP-rr-ttr"/>
@@ -1510,13 +1519,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="常规" id="wuq-bg-CPR"/>
                     <connections>
+                        <outlet property="cardAtmosphere" destination="pg4-jF-68Q" id="B1g-0f-BgN"/>
+                        <outlet property="cardCharactersView" destination="sda-h8-6R8" id="Ah5-iB-ucI"/>
+                        <outlet property="cardPages" destination="XHY-6K-7J7" id="KkD-PA-UQ8"/>
+                        <outlet property="cardSceneName" destination="lSi-xg-Wlz" id="Nwz-V3-Ola"/>
                         <outlet property="cardSceneNo" destination="ZDD-PG-hPp" id="kEi-Uc-TtA"/>
+                        <outlet property="cardSynopsis" destination="Xr1-jf-of6" id="pFF-UC-WYt"/>
                         <outlet property="collectionView" destination="SE2-tJ-oMK" id="q9G-8l-a4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYr-gO-Szv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="-2080"/>
+            <point key="canvasLocation" x="-226.46484374999997" y="-2080.46875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4p4-So-u3n">

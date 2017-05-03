@@ -48,6 +48,7 @@
 		5F69A4351E4ADC04008A8112 /* VBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A4341E4ADC04008A8112 /* VBChartView.swift */; };
 		5F69A4381E4B16BD008A8112 /* VBChartViewConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A4371E4B16BD008A8112 /* VBChartViewConst.swift */; };
 		5F74F0881DC20EA200C1C2BE /* GeneralInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F0871DC20EA200C1C2BE /* GeneralInfoCell.swift */; };
+		5F75627E1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F75627D1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift */; };
 		5F81B2E91E529AC300D1DD45 /* CheckAlgorithmModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F81B2E81E529AC300D1DD45 /* CheckAlgorithmModal.swift */; };
 		5F87D6581E71B3210074E192 /* DepartmentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87D6571E71B3210074E192 /* DepartmentHeaderView.swift */; };
 		5F8F691D1D9A8A7E0045210D /* DailySheetTimeAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F691C1D9A8A7E0045210D /* DailySheetTimeAxisView.swift */; };
@@ -122,6 +123,7 @@
 		5F69A4341E4ADC04008A8112 /* VBChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBChartView.swift; sourceTree = "<group>"; };
 		5F69A4371E4B16BD008A8112 /* VBChartViewConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBChartViewConst.swift; sourceTree = "<group>"; };
 		5F74F0871DC20EA200C1C2BE /* GeneralInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoCell.swift; sourceTree = "<group>"; };
+		5F75627D1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoarlDatabase_AboutContinuitySheet.swift; sourceTree = "<group>"; };
 		5F81B2E81E529AC300D1DD45 /* CheckAlgorithmModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAlgorithmModal.swift; sourceTree = "<group>"; };
 		5F87D6571E71B3210074E192 /* DepartmentHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentHeaderView.swift; sourceTree = "<group>"; };
 		5F8F691C1D9A8A7E0045210D /* DailySheetTimeAxisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySheetTimeAxisView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5F04D57A1DBCBEEA00814A9F /* TempoarlDatabase_AboutCharacter.swift */,
 				5F039BB21E11526800F69073 /* TempoarlDatabase_AboutGeneralQuery.swift */,
 				5FCC66B41E178B2900995210 /* TempoarlDatebase_AboutWarehouse.swift */,
+				5F75627D1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift */,
 			);
 			name = DataBase;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				5F69A42E1E4AD4DA008A8112 /* UUBar.swift in Sources */,
 				5F38893E1DC085CA0043C2E0 /* LocationCell.swift in Sources */,
 				5F31855C1D7EB12C00B41603 /* DetailTabBarController.swift in Sources */,
+				5F75627E1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift in Sources */,
 				5FE2141E1D8009C00077D437 /* ActorCell.swift in Sources */,
 				5FF009AB1D8A88C5006E9E68 /* CustomCollectionViewLayout.swift in Sources */,
 				5FEFBCAF1E63DEC000A14D47 /* SceneCardViewController.swift in Sources */,

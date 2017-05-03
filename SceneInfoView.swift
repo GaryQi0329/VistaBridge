@@ -44,8 +44,8 @@ class SceneInfoView: UIView {
             var count = 0
             for actor in sceneInfo!.characters! {
                 let button = UIButton.init(frame: CGRect(origin: CGPoint(x: 0 + count*ButtonSize, y: 90), size: CGSize(width: ButtonSize, height: ButtonSize)))
-                button.titleLabel?.font = UIFont.init(name:"Heiti SC", size: 15)
-                button.titleLabel?.backgroundColor = UIColor.red
+                button.titleLabel?.font = UIFont.init(name:"PingFangTC-Medium", size: 15)
+                button.titleLabel?.backgroundColor = actor.color
                 button.setTitle(actor.acronym, for: UIControlState())
                 self.addSubview(button)
                 count += 1

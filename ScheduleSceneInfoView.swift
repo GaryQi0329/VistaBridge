@@ -54,7 +54,7 @@ class ScheduleSceneInfoView: UIView {
             for actor in sceneInfo.characters! {
                 let button = UIButton.init()
                 button.titleLabel?.font = UIFont(name: "PingFangTC-Medium", size: ButtonTitleSize)
-                button.backgroundColor = COLORS[count]
+                button.backgroundColor = actor.color
                 button.setTitle(actor.acronym, for: UIControlState())
                 charactersButtons.append(button)
                 self.addSubview(button)

@@ -141,13 +141,25 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
         
         var dates : [String] = []
         for d in DATE["7月"]! {
-            let str = "07\(d)"
-            dates.append(str)
+            if (Int(d)! < 9) {
+            let str = "070\(d)"
+                dates.append(str)
+            } else {
+                let str = "07\(d)"
+                dates.append(str)
+            }
+            
         }
         
         for d in DATE["8月"]! {
-            let str = "08\(d)"
-            dates.append(str)
+            
+            if (Int(d)! < 9) {
+                let str = "080\(d)"
+                dates.append(str)
+            } else {
+                let str = "08\(d)"
+                dates.append(str)
+            }
         }
         
         

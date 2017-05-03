@@ -12,9 +12,15 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let ButtonSize : CGFloat = 30
+    
     //场次信息卡
     @IBOutlet weak var cardSceneNo: UILabel!
-    
+    @IBOutlet weak var cardSceneName: UILabel!
+    @IBOutlet weak var cardAtmosphere: UILabel!
+    @IBOutlet weak var cardPages: UILabel!
+    @IBOutlet weak var cardSynopsis: UILabel!
+    @IBOutlet weak var cardCharactersView: UIView!
     
     let NotificationName_DateNumberChange = "SceneInfoViewController_SceneNumberChanged"
     
@@ -24,6 +30,8 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
     var sceneNo = 1 {   //场次号
         didSet{
             collectionView.reloadData()
+            updateCard()
+            
         }
     }
     
@@ -51,10 +59,12 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
         item12.width = -5
         
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems = [item3,item12,item2,item12,item1,item12,item0]
+        
+        sceneNo = 1
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)  
+        super.viewWillAppear(animated)
         self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
     }
     
@@ -122,7 +132,7 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
             cell.typeLabel.text = "道具"
             cell.typeLabel.backgroundColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
             cell.prepareInfosWithTableCell(.props, sceneNo: sceneNo)
-
+            
             return cell
         case .equipment :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier_infosWithTableCell, for:indexPath) as! InfosWithTableCell
@@ -153,6 +163,36 @@ class CommonInfosOfSceneViewController: UIViewController ,UICollectionViewDataSo
         let sceneNo = userInfo!["sceneNo"] as! Int
         print("消息收到\(sceneNo)")
         self.sceneNo = sceneNo
+    }
+    
+    func updateCard() {
+        for sceneInfo in SCENE_INFOS {
+            if (sceneInfo.sceneNo.number == sceneNo) {
+                cardSceneNo.text = String(sceneNo)
+                cardSceneName.text = sceneInfo.sceneName
+                cardAtmosphere.text = atmosphereToString(index: (sceneInfo.atmosphere?.rawValue)!)
+                cardPages.text = NSString(format: "%.1f",sceneInfo.pages!) as String
+                cardSynopsis.text = sceneInfo.synopsis
+                
+                //更新涉及演员小方格
+                for v in cardCharactersView.subviews {
+                    v.removeFromSuperview()
+                }
+                if sceneInfo.characters != nil {
+                    var count = 0
+                    
+                    for actor in sceneInfo.characters! {
+                        let button = UIButton.init(frame: CGRect(origin: CGPoint(x: 0 + CGFloat(count)*ButtonSize, y: 0), size: CGSize(width: ButtonSize, height: ButtonSize)))
+                        button.titleLabel?.font = UIFont.init(name:"PingFangTC-Medium", size: 15)
+                        button.backgroundColor = actor.color!
+                        button.setTitle(actor.acronym, for: UIControlState())
+                        cardCharactersView.addSubview(button)
+                        count += 1
+                    }
+                    
+                }
+            }
+        }
     }
     
     func segueToCommonInfos() {

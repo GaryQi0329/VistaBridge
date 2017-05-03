@@ -40,6 +40,25 @@ enum ATMOSPHERE : Int{
     case nightOut
 }
 
+func atmosphereToString(index : Int) -> String {
+    switch index {
+    case 0 :
+        return "日内"
+        break
+    case 1 :
+        return "日外"
+        break
+    case 2 :
+        return "夜内"
+        break
+    case 3 :
+        return "夜外"
+        break
+    default :
+        return ""
+    }
+}
+
 let arr_ATMOSPHERE = ["日内","日外","夜内","夜外"]
 
 //拍摄器械的基本信息
@@ -849,11 +868,4 @@ let DAILYSHEET = [
     DailySheet(date: "0711", departureTime: timeOnDailySheet(day:11,hour: 5,minute: 30), firstShotAfterDeparture: timeOnDailySheet(day:11,hour: 8,minute: 30), lunchtime: timeOnDailySheet(day:11,hour: 12,minute: 30), firstShotAfterLunch: timeOnDailySheet(day:11,hour: 14,minute: 0), suppertime :timeOnDailySheet(day:11,hour: 18,minute: 30),fistShotAfterSupper:timeOnDailySheet(day:11,hour: 20,minute: 30),offTime: timeOnDailySheet(day:12,hour: 3,minute: 30))
 ]
 
-let CONTINUITY_SHEET_INFOS : [String:[ContinuitySheetRecording]] = [
-    
-    "0711" :[ContinuitySheetRecording(createdDate:"0711",rollNumber: "A001", fileNumber: "C001", sceneNumber: 13, shotNumber: 1, takeNumber: 1, result: .ng, synopsis: "忽出鲁与铁木真交战",shotSize:.mcu)],
-    "0712" :[ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出砍向杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "大刀特写", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C002", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C003", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C004", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C005", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C006", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C007", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),ContinuitySheetRecording(createdDate: "0712", rollNumber: "A002", fileNumber: "C001", sceneNumber: 13, shotNumber: 4, takeNumber: 1, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls),
-             ContinuitySheetRecording(createdDate: "0712", rollNumber: "A004", fileNumber: "C002", sceneNumber: 13, shotNumber: 5, takeNumber: 7, result: .ok, synopsis: "忽出鲁查杀铁木真", shotSize:ShotSize.mls)],
-    "0713" :[ContinuitySheetRecording(createdDate:"0713",rollNumber: "A004", fileNumber: "C011", sceneNumber: 4, shotNumber: 1, takeNumber: 1, result: .ng, synopsis: "忽出鲁与铁木真交战",shotSize:.mcu)]
-]
 
