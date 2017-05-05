@@ -47,6 +47,7 @@
 		5F69A4331E4AD4DA008A8112 /* UULineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A42D1E4AD4DA008A8112 /* UULineChart.swift */; };
 		5F69A4351E4ADC04008A8112 /* VBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A4341E4ADC04008A8112 /* VBChartView.swift */; };
 		5F69A4381E4B16BD008A8112 /* VBChartViewConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A4371E4B16BD008A8112 /* VBChartViewConst.swift */; };
+		5F70BDB21EBC0C6B00840F53 /* SheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70BDB11EBC0C6B00840F53 /* SheetHeaderView.swift */; };
 		5F74F0881DC20EA200C1C2BE /* GeneralInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F0871DC20EA200C1C2BE /* GeneralInfoCell.swift */; };
 		5F75627E1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F75627D1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift */; };
 		5F81B2E91E529AC300D1DD45 /* CheckAlgorithmModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F81B2E81E529AC300D1DD45 /* CheckAlgorithmModal.swift */; };
@@ -122,6 +123,7 @@
 		5F69A42D1E4AD4DA008A8112 /* UULineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UULineChart.swift; sourceTree = "<group>"; };
 		5F69A4341E4ADC04008A8112 /* VBChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBChartView.swift; sourceTree = "<group>"; };
 		5F69A4371E4B16BD008A8112 /* VBChartViewConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBChartViewConst.swift; sourceTree = "<group>"; };
+		5F70BDB11EBC0C6B00840F53 /* SheetHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		5F74F0871DC20EA200C1C2BE /* GeneralInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoCell.swift; sourceTree = "<group>"; };
 		5F75627D1EB9B66E00486A32 /* TempoarlDatabase_AboutContinuitySheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoarlDatabase_AboutContinuitySheet.swift; sourceTree = "<group>"; };
 		5F81B2E81E529AC300D1DD45 /* CheckAlgorithmModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAlgorithmModal.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				5F4F15D71D8FBC6C00BE5FFE /* ContinuitySheetCell.swift */,
 				5FC99B371DD2B94A0076CFD6 /* ContinuitySheetHeaderView.swift */,
 				5FC99B3A1DD357A20076CFD6 /* ContinuitySheetDateCell.swift */,
+				5F70BDB11EBC0C6B00840F53 /* SheetHeaderView.swift */,
 			);
 			name = ContinuitySheetCells;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				5FF5E95D1D84631000B2F9A5 /* ScheduleCell.swift in Sources */,
 				5F69A4301E4AD4DA008A8112 /* UUChart.swift in Sources */,
 				5F1E07D81E1CAF2A000FF2B3 /* ScreenplayViewController.swift in Sources */,
+				5F70BDB21EBC0C6B00840F53 /* SheetHeaderView.swift in Sources */,
 				5FE214201D8009CA0077D437 /* DateCell.swift in Sources */,
 				5F69A4351E4ADC04008A8112 /* VBChartView.swift in Sources */,
 				5F1F1D491D7EEBEB00B387ED /* CastInfoViewController.swift in Sources */,

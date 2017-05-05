@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VistaBridge/ContinuitySheetOfSceneViewController.swift"
-            timestampString = "515505856.754423"
+            timestampString = "515640975.549831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "searchContinuitySheetRecordingsBySceneNo(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,13 +218,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VistaBridge/ContinuitySheetOfSceneViewController.swift"
-            timestampString = "515505856.754423"
+            timestampString = "515640975.549831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "searchContinuitySheetRecordingsBySceneNo(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VistaBridge/ContinuitySheetOfSceneViewController.swift"
+            timestampString = "515640975.549831"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VistaBridge/ContinuitySheetOfSceneViewController.swift"
+            timestampString = "515640975.549831"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VistaBridge.ContinuitySheetOfSceneViewController.tableView (__ObjC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "VistaBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GaryQi/Documents/Code/VistaBridgeOrigin/VistaBridge/ContinuitySheetOfSceneViewController.swift"
+                  timestampString = "515600570.72814"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "2041">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VistaBridge.ContinuitySheetOfSceneViewController.tableView (__ObjC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "VistaBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GaryQi/Documents/Code/VistaBridgeOrigin/VistaBridge/ContinuitySheetOfSceneViewController.swift"
+                  timestampString = "515600570.730007"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "2363">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

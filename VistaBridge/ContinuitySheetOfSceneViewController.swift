@@ -10,7 +10,8 @@
 import UIKit
 
 class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSource , UITableViewDelegate{
-
+    
+    @IBOutlet weak var headerView_ContinuitySheet: UIView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,15 +24,36 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
     var keys : [String]?
     var positionOfDateLabelCell : [Int] = [0]
     
+    var positionIndicator = 1
+    var positionIndicator_2 = 0
+    var positionIndicator_3 = 0
+    var isFirstTime = true
+    
     var sceneNo : Int? {
         didSet {
             //每当sceneNo重新设置了新的值，就更新tableView中的数据
             print(sceneNo)
             recordings = searchContinuitySheetRecordingsBySceneNo(sceneNo!)
             keys = [String](recordings!.keys)
+            
+            if positionOfDateLabelCell.count != 1 {
+                positionOfDateLabelCell = [0]
+            }
+            
+            var positionIndicator = 1
+            var positionIndicator_2 = 0
+            positionIndicator_3 = 0
+            
             tableView.reloadData()
             
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let c = ContinuitySheetHeaderView.init(frame: self.headerView_ContinuitySheet.bounds)
+        self.headerView_ContinuitySheet.addSubview(c)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,7 +70,6 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
         
         self.tabBarController!.tabBarController!.navigationItem.rightBarButtonItems = [item3,item12,item2,item12,item1,item12,item0]
         
-        print(self.tabBarController?.tabBarController?.navigationItem.rightBarButtonItems!)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,7 +84,8 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
         
         NotificationCenter.default.addObserver(self, selector: #selector(ContinuitySheetOfSceneViewController.sceneNumberDidChanged(_:)), name: NSNotification.Name(rawValue: NotificationName_DateNumberChange), object: nil)
         
-        tableView.register(ContinuitySheetHeaderView.self, forHeaderFooterViewReuseIdentifier: Identifier_HeaderView)
+        tableView.register(SheetHeaderView.self, forHeaderFooterViewReuseIdentifier: Identifier_HeaderView)
+        
     }
     
     
@@ -74,42 +96,71 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return (keys?.count)!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if recordings != nil {
-            var count = 0
-            var n = 0
+//            var count = 0
+//            var n = 0
+//            
+//            for key in keys! {
+//                count += (recordings![key]?.count)!
+//                n += ((recordings![key]?.count)! + 1)
+//                positionOfDateLabelCell.append(n)
+//                
+//            }
+//            
+//            count += (keys?.count)!
+//            return count
+//            
             
-            for key in keys! {
-                count += (recordings![key]?.count)!
-                n += (recordings![key]?.count)! + 1
-                positionOfDateLabelCell.append(n)
-            }
+            return recordings![keys![section]]!.count
             
-            count += (keys?.count)!
-            return count
+//            
         }
-        
+//
         return 0
     }
     
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return keys?[section]
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if checkPosition(indexPath.row) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier_ContinuitySheetDateCell, for: indexPath) as! ContinuitySheetDateCell
-            let nowPosition = positionOfDateLabelCell.index(of: indexPath.row)
-            cell.dateLabel.text = "日期:\(keys![nowPosition!])"
-            return cell
-        }
+//        if checkPosition(indexPath.row) {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier_ContinuitySheetDateCell, for: indexPath) as! ContinuitySheetDateCell
+//            let nowPosition = positionOfDateLabelCell.index(of: indexPath.row)
+//            cell.dateLabel.text = "日期:\(keys![nowPosition!])"
+//            return cell
+//        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier_ContinuitySheetCell) as! ContinuitySheetCell
+        
         if let key = keys?[indexPath.section] {
             let recordingsOfDate = recordings![key]!
-            for recording in recordingsOfDate {
-                cell.prepareContinuitySheetCell(recording)
-            }
+            
+            
+//            if positionIndicator_2 == 0 {
+//                
+//                if isFirstTime {
+//                    positionIndicator_2 = recordingsOfDate.count
+//                    isFirstTime = false
+//                } else {
+//                    positionIndicator_2 = recordingsOfDate.count
+//                    positionIndicator += recordingsOfDate.count + 1
+//                    positionIndicator_3 += 1
+//                    
+//                }
+//            }
+            
+//            let recording =  recordingsOfDate[indexPath.row - positionIndicator]
+            let recording =  recordingsOfDate[indexPath.row]
+            cell.prepareContinuitySheetCell(recording)
+            
+//            positionIndicator_2 -= 1
+            
         }
         
         return cell
@@ -118,21 +169,22 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Identifier_HeaderView) as! ContinuitySheetHeaderView
+        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Identifier_HeaderView) as! SheetHeaderView
+        cell.updateDateLabel(date: (keys?[section])!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
+        return 40
     }
     
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return keys?[section]
-//    }
+    //    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //        return keys?[section]
+    //    }
     
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//    }
+    //    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    //
+    //    }
     
     fileprivate func searchContinuitySheetRecordingsBySceneNo(_ sceneNo:Int) -> [String : [ContinuitySheetRecording]]?{
         //根据日期，寻找当日的场记表条目
@@ -142,7 +194,7 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
         var dates : [String] = []
         for d in DATE["7月"]! {
             if (Int(d)! < 9) {
-            let str = "070\(d)"
+                let str = "070\(d)"
                 dates.append(str)
             } else {
                 let str = "07\(d)"
@@ -176,21 +228,21 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
                     }
                 }
                 
-                }
+            }
             
             if temp.count > 0 {
                 results.updateValue(temp, forKey: date)
                 temp = []
-            
+                
             }
         }
         
         return results
-       
+        
     }
     
     func sceneNumberDidChanged(_ notification : Notification) {
-       
+        
         let userInfo = notification.userInfo
         let sceneNo = userInfo!["sceneNo"] as! Int
         print("消息收到\(sceneNo)")
@@ -216,11 +268,11 @@ class ContinuitySheetOfSceneViewController: UIViewController, UITableViewDataSou
     func checkPosition(_ row:Int) -> Bool {
         for i in positionOfDateLabelCell {
             if i == row {
-            return true
+                return true
             }
         }
         
         return false
     }
-
+    
 }
